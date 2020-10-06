@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AP2-Unigranrio</title>
+
+    <link rel="stylesheet" type="text/css" href="_css/estilos.css" />
+    <script src="_js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="_js/jquery.mask.min.js" type="text/javascript"></script>
+    <script src="_js/funcoes.js" type="text/javascript"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pt-BR" />
+    <meta name="author" content="Maycon-5405684">
+    <meta name="copyright" content="Copyright 2020">
+
+    <script type="text/JavaScript">
+    function so_nro(e,args){		
+        if (document.all){var evt=event.keyCode;}
+        else{var evt = e.charCode;}
+        var chr= String.fromCharCode(evt);
+        if (chr == "." ){return true;}
+        if (chr <= 9 ){return true;}
+        if (evt == 32){return true;}
+        return false;
+    }
+
+    function so_nro2(e,args){		
+        if (document.all){var evt=event.keyCode;}
+        else{var evt = e.charCode;}
+        var chr= String.fromCharCode(evt);
+        if (chr <= 9 ){return true;}
+        if (evt == 32){return true;}
+        return false;
+    }
+
+    function so_nro3(e,args){		
+        if (document.all){var evt=event.keyCode;}
+        else{var evt = e.charCode;}
+        var chr= String.fromCharCode(evt);
+        if (chr == "-" ){return true;}
+        if (chr <= 9 ){return true;}
+        if (evt == 32){return true;}
+        return false;
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Atividade 01</h1>
+    <h2>Faça um programa que entre com três números, faça a média aritmética e mostre o
+        resultado.</h2>
+
+    <div class="ativ">
+
+        <input type="text" placeholder="Insira o primeiro número" id="at01nr1" onkeypress="return so_nro(evet);" autocomplete="off"><br><br>
+        <input type="text" placeholder="Insira o segundo número" id="at01nr2" onkeypress="return so_nro(event);" autocomplete="off"><br><br>
+        <input type="text" placeholder="Insira o terceiro número" id="at01nr3" onkeypress="return so_nro(event);" autocomplete="off"><br><br>
+        <input type="button" value="Calcular" onclick="ativ01(document.getElementById('at01nr1').value,document.getElementById('at01nr2').value, document.getElementById('at01nr3').value)" class="bt">
+        <br><br>
+        <div id="ativ01">
+
+        </div>
+    </div>
+
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 02</h1>
+    <h2>Faça um programa que entre com o nome e o salário de um funcionário e mostre seu
+        novo salário, sabendo que o mesmo teve um aumento de 10%.</h2>
+
+    <div class="ativ">
+
+        <input type="text" placeholder="Nome Funcionário" id="at02nomefun" autocomplete="off"><br><br>
+        <input type="text" placeholder="Salário Atual Funcionário" id="at02salfun" onkeypress="return so_nro(event);" autocomplete="off"><br><br>
+        <input type="button" value="Calcular" onclick="ativ02(document.getElementById('at02nomefun').value,document.getElementById('at02salfun').value)" class="bt">
+        <br><br>
+        <div id="ativ02">
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 03</h1>
+    <h2>Faça um programa que leia dois valores inteiros A e B se os valores forem iguais
+        devem ser somado os dois, caso contrário multiplique A por B ao final do cálculo atribuir o valor para uma variável C.</h2>
+
+    <div class="ativ">
+
+        <input type="text" placeholder="Valor 01" id="at03nr1" autocomplete="off" onkeypress="return so_nro2(event);"><br><br>
+        <input type="text" placeholder="Valor 02" id="at03nr2" onkeypress="return so_nro2(event);" autocomplete="off"><br><br>
+        <input type="button" value="Calcular" onclick="ativ03(document.getElementById('at03nr1').value,document.getElementById('at03nr2').value)" class="bt">
+        <br><br>
+        <div id="ativ03">
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 04</h1>
+    <h2>A partir do preço à vista de um determinado produto, calcule o preço total a pagar e o
+        valor da prestação mensal, referentes ao pagamento parcelado. Se o pagamento for
+        parcelado em 3 vezes deve ser dado um acréscimo de 10% no total a ser pago. Se o
+        parcelamento for em 5 vezes, o acréscimo será de 20%.</h2>
+
+    <div class="ativ">
+
+        <input type="text" placeholder="Preço A Vista" id="at04preco" autocomplete="off" onkeypress="return so_nro(event);"><br><br>
+        <select id="at04parcela">
+            <option value=1>Selecione o Nro de Parcelas</option>
+            <option value=3>3</option>
+            <option value=5>5</option>
+        </select>
+        <br><br>
+        <input type="button" value="Calcular" onclick="ativ04(document.getElementById('at04preco').value,document.getElementById('at04parcela').value)" class="bt">
+        <br><br>
+        <div id="ativ04">
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 05</h1>
+    <h2>Faça um programa que leia o nome e as três notas de uma disciplina de um aluno e ao
+        final escreva o nome do aluno, sua média e se ele foi aprovado, sabendo-se que a
+        média para aprovação é igual ou superior a 8.</h2>
+
+    <div class="ativ">
+
+        <input type="text" placeholder="Nome Aluno" id="at05nome" autocomplete="off"><br><br>
+        <input type="text" placeholder="Nota 01" id="at05nt1" autocomplete="off" onkeypress="return so_nro(event);"><br><br>
+        <input type="text" placeholder="Nota 02" id="at05nt2" autocomplete="off" onkeypress="return so_nro(event);"><br><br>
+        <input type="text" placeholder="Nota 03" id="at05nt3" autocomplete="off" onkeypress="return so_nro(event);"><br><br>
+        <input type="button" value="Calcular" onclick="ativ05(document.getElementById('at05nome').value,document.getElementById('at05nt1').value,document.getElementById('at05nt2').value,document.getElementById('at05nt3').value)" class="bt">
+        <br><br>
+        <div id="ativ05">
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 06</h1>
+    <h2>Escreva um programa que receba dois números reais e um código de seleção do
+        usuário. Se o código digitado for 1, faça o programa adicionar os dois números
+        previamente digitados e mostrar o resultado; se o código de seleção for 2, os números
+        deverão ser multiplicados; se o código de seleção for 3, o primeiro número deve ser
+        dividido pelo segundo.</h2>
+
+    <div class="ativ">
+
+        <input type="text" placeholder="Nro 01" id="at06nr1" autocomplete="off" onkeypress="return so_nro3(event);"><br><br>
+        <input type="text" placeholder="Nro 02" id="at06nr2" autocomplete="off" onkeypress="return so_nro3(event);"><br><br>
+        <input type="text" placeholder="digite um código" id="at06sel" autocomplete="off" onkeypress="return so_nro3(event);">
+        <label>1 - Somar / 2 - Multiplicar / 3 - Dividir</label>
+        <br><br>
+        <input type="button" value="Calcular" onclick="ativ06(document.getElementById('at06nr1').value,document.getElementById('at06nr2').value,document.getElementById('at06sel').value)" class="bt">
+        <br><br>
+        <div id="ativ06">
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 07</h1>
+    <div class="ativ">
+
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 08</h1>
+    <h2>Leia 20 valores reais e calcule seu somatório utilizando a instrução while.</h2>
+
+    <div class="ativ">
+
+        <input type="button" value="Iniciar" onclick="ativ08()" class="bt">
+        <br><br>
+        <div id="ativ08"></div>
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 09</h1>
+    <h2>Leia 20 valores reais e calcule seu somatório utilizando a instrução do...while.</h2>
+
+    <div class="ativ">
+
+        <input type="button" value="Iniciar" onclick="ativ09()" class="bt">
+        <br><br>
+        <div id="ativ09"></div>
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 10</h1>
+    <h2>Faça um programa, utilizando as estruturas de repetição, onde o programa deverá finalizar quando o usuário digitar 0, caso contrário ficará cadastrando os pedidos, agora vai poder acumular mais de um produto e ao final deverá ser dada a soma dos pedidos.<br>
+    O cardápio de uma casa de lanches é dado pela tabela abaixo:<br>
+    <img src='_img/cardapio.png'/>
+    <br><br>
+    Escreva um programa que leia o código do item adquirido pelo consumidor e a quantidade, calculando e mostrando o valor a pagar. Não será necessário exibir o produto e o valor, somente o valor final.
+    </h2>
+
+    <div class="ativ">
+        <br><br>
+        <input type="button" value="Iniciar" onclick="ativ10()" class="bt">
+        <br><br>
+        <div id="ativ10"></div>
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+
+    <h1>Atividade 11</h1>
+    <h2> Faça um Programa que apresente o quadrado de cada um dos números pares entre 1 a 100.
+    </h2>
+
+    <div class="ativ">
+        <br><br>
+        <input type="button" value="Iniciar" onclick="ativ11()" class="bt">
+        <br><br>
+        <div id="ativ11"></div>
+
+        </div>
+    </div>
+    <h1>_______________________________________________________</h1>
+</body>
+
+</html>
