@@ -126,7 +126,7 @@ function ativ05(p1,p2,p3,p4) {
         var divElement = document.querySelector('#ativ05');
         divElement.innerHTML = '';
         var labelElement = document.createElement('label');
-        var textElement = document.createTextNode('O aluno '+p1 + ' foi repovado com média de ' + media);
+        var textElement = document.createTextNode('O aluno '+p1 + ' foi reprovado com média de ' + media);
         labelElement.appendChild(textElement);
         divElement.appendChild(labelElement);
     }
